@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-12 bacbuttons">
+        <button routerLink="/LoginForm" class="btn btn-success backLoginform">Back to LoginForm</button>
+        <button routerLink="/" class="btn btn-success backAuthentication">Back to  Authentication</button>
+    </div>
+</div>
+<div class="row body">
+    <div class="col-4 RegisterForm">
+        <form #RegisterForm="ngForm" (ngSubmit)="registerSubmit(RegisterForm)">
+            <div><input type="text" name="firstName" ngModel #firstName required placeholder="Enter Your Fisrst Name"></div>
+            <div><input type="text" name="lastName" ngModel #lastName required placeholder="Enter Your last Name"></div>
+            <div><input type="number" name="phoneNumber" ngModel #phoneNumber required placeholder="Enter Your phone Number"></div>
+            <div><input type="email" name="email" ngModel #phoneNumber required placeholder="Enter Your Email"></div>
+            <div><input type="password" name="password" ngModel #password required placeholder="Enter Your Password"></div>
+            <div><input type="password" name="repassword" ngModel #repassword required placeholder="Enter Your Re-Password"></div>
+            <div><button class="btn btn-primary loginButton" type="submit">Login</button></div>
+        </form>
+    </div>
+</div>
+
+

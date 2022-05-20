@@ -1,0 +1,22 @@
+<div class="row header">
+    <div class="col-2 ">
+        <button routerLink="/" class="btn btn-success backAuthentication">Back to  Authentication</button>
+    </div>
+    <div class="col-3 usernameinfo">
+        <h4><u>{{username}}</u></h4>
+    </div>
+</div>
+<div class="row body">
+    <div class="col-4 loginForm">
+        <form #Lofinform="ngForm" (ngSubmit)="submitForm(Lofinform)">
+            <div><input type="email" name="email" ngModel #email placeholder="Enter Your Email" required ></div>
+            <div><input type="password" name="password" ngModel #password placeholder="Enter Your Password" required ></div>
+            <button type="submit" class="btn btn-primary submit" [disabled]="Lofinform.form.invalid">Submit</button>
+            <div [ngClass]="(!loginError) ? 'success':'error'">
+                <p *ngIf="!showmsg">{{loginError}}</p>
+            </div>
+        </form>
+        <a href="" routerLink="/RegisterForm">Go to RegisterForm for signUp!</a>
+    </div>
+</div>
+

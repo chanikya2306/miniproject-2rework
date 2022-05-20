@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-12 header">
+        <img src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="Angular logo">
+        <button routerLink="Header" class="btn btn-success headerComponent">HeaderComponent</button>
+        <button routerLink="MainPage" class="btn btn-success main">MainPageComponent</button>
+        <button routerLink="Footer" class="btn btn-success footer">FooterComponent</button>
+        <button routerLink="/" class="btn btn-success authentication">Back to Authentication</button>
+    </div>
+</div>
+<div class="row body">
+    <p>dashboard works!</p>
+    <div class="row">
+        <div class="col-2">
+            <div appErrormsg>
+                <h5>Custom Directive</h5>
+                <h5>SideNav Bar</h5>
+                <h5>SideNav Bar</h5>
+                <h5>SideNav Bar</h5>
+                <h5>SideNav Bar</h5>
+                <h5>SideNav Bar</h5>
+                <h5>SideNav Bar</h5>
+            </div>
+        </div>
+        <div class="col-8" appErrormsg>
+            <app-input [receviemsg]="sendMsg"(massegeEvent)="receviemsgdata($event)"></app-input>
+            <app-output></app-output>
+            <p>{{receveoutput}}</p>
+        </div>
+        <div class="col-2" appErrormsg>
+            <p>Shared Service data</p>
+            <h5>{{displayvalues}}</h5>
+            <h5>{{subvalues}}</h5>
+            <h5>{{mulvalues}}</h5>
+            <h5>{{divvalues}}</h5>
+        </div>
+    </div>
+</div>
